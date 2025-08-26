@@ -1,7 +1,6 @@
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: white;
   margin: 0;
   padding: 20px;
 }
@@ -30,7 +29,7 @@ body {
 }
 
 .user-data {
-  background-color: #fff;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
@@ -39,16 +38,11 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.user-data:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 .header {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #fff;
+  color: white;
   background-color: blue;
   padding: 4px;
   border-radius: 8px;
@@ -66,13 +60,13 @@ body {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #222;
+  color: black;
 }
 
 .email,
 .phone {
   font-size: 12px;
-  color: #555;
+  color: grey;
   margin-bottom: 3px;
   word-wrap: break-word;
 }
