@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.card {
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  font-weight: bold;
+  color: #fff;
+  background-color: blue;
+  padding: 5px 0;
+  border-radius: 6px 6px 0 0;
+  margin: -15px -15px 10px -15px;
+  font-size: 14px;
+}
+
+.photo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.info {
+  font-size: 13px;
+  margin: 3px 0;
+  color: #555;
+}
