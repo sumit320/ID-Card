@@ -1,38 +1,44 @@
 import { useEffect, useState } from "react";
-
 import "./App.css";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
-    const fetchdata = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch("https://randomuser.me/api?results=10");
-        const data = await response.json();
-        setUsers(data.results);
+        const res = await fetch("https://randomuser.me/api?results=10");
+        const data = await res.json();
+        setUser(data.results);
       } catch (err) {
-        console.log("Something went Wrong");
+        console.log("Somethig went Wrong");
       }
     };
-    fetchdata();
+    fetchData();
   }, []);
 
   return (
     <div className="container">
-      {users.map((user, index) => (
-        <div key={index} className="card">
-          <div className="header">ID Card</div>
-          <img className="photo" src={user.picture.medium} />
-          <h3 className="name">
-            {user.name.first} {user.name.last}
-          </h3>
-          <p className="info">{user.email}</p>
-          <p className="info">{user.phone}</p>
-        </div>
-      ))}
+      <div className="id-card">
+        {user.map((item, index) => (
+          <div className="user-data" key={index}>
+            <div className="header">ID card</div>
+            <div className="divider">
+              <img className="photo" src={item.picture.medium} />
+              <div className="user-data2">
+                <div className="name">
+                  {item.name.title}
+                  {item.name.first}
+                  {item.name.last}
+                </div>
+                <div className="email">{item.email}</div>
+                <div className="phone">{item.phone}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
-
+};
 export default App;

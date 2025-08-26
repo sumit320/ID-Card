@@ -1,53 +1,78 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-  padding: 20px;
-  background-color: #ccc;
-  cursor: pointer;
+  gap: 20px;
 }
 
-.card {
-  width: 220px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+.id-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.divider {
+  display: flex;
+  gap: 15px;
+}
+.user-data2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-data {
   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
   padding: 15px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card:hover {
+.user-data:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .header {
   font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
   color: #fff;
   background-color: blue;
-  padding: 5px 0;
-  border-radius: 6px 6px 0 0;
-  margin: -15px -15px 10px -15px;
-  font-size: 14px;
+  padding: 4px;
+  border-radius: 8px;
 }
 
 .photo {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
 .name {
-  font-size: 16px;
-  margin: 5px 0;
-  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222;
 }
 
-.info {
-  font-size: 13px;
-  margin: 3px 0;
-  color: black;
+.email,
+.phone {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 3px;
+  word-wrap: break-word;
 }
